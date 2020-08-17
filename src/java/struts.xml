@@ -1,0 +1,25 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    
+    <package name="default" extends="struts-default">
+        <action name="registrar" class="operaciones.Service">
+            
+            <result name="success">/JSP/Exito.jsp</result>
+            
+        </action>
+        
+        
+        <action name="consultar" class="operaciones.Service" method="consulta">
+            
+            <result name="success">/JSP/Tabla.jsp</result>
+            
+        </action>
+        <action name="deleteuser" class="operaciones.Service" method="userdelete">
+            <result name="success" >UserDetailsList.jsp</result>
+        </action>
+        
+    </package>
+</struts>
